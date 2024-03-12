@@ -16,3 +16,8 @@ def about(request):
 def contact(request):
     ctx = {}
     return render(request, 'main/contact.html', ctx)
+
+
+def author(request):
+    ctx = {}
+    return render(request, 'main/about.html', ctx)

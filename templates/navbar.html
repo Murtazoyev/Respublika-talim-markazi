@@ -29,12 +29,12 @@
 {#            <a href><i class="fa fa-shopping-cart"></i></a>#}
 {#        </div>#}
         <ul class="main-menu">
-            <li class="active"><a href="index-2.html">Bosh Sahifa</a></li>
-            <li><a href="#">Biz haqimizda</a></li>
-            <li><a href="#">Mualliflar</a></li>
-            <li><a href="#">O'quv resurslari</a></li>
-            <li><a href="#">Yangiliklar</a></li>
-            <li><a href="#">Aloqa</a></li>
+            <li class="{% if request.path == "/" %}active{% endif %}"><a href="{% url 'main:index' %}">Bosh Sahifa</a></li>
+            <li class="{% if request.path == "/about/" %}active{% endif %}"><a href="{% url 'main:about' %}">Biz haqimizda</a></li>
+            <li class="{% if request.path == "/authors/" %}active{% endif %}"><a href="{% url 'main:author' %}#mualliflar">Mualliflar</a></li>
+            <li class="{% if request.path == "/resources/" %}active{% endif %}"><a href="#">O'quv resurslari</a></li>
+            <li class="{% if request.path == "/news/" %}active{% endif %}"><a href="#">Yangiliklar</a></li>
+            <li class="{% if request.path == "/contact/" %}active{% endif %}"><a href="#">Aloqa</a></li>
         </ul>
     </div>
 </nav>
